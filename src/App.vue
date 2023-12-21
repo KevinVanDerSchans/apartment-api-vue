@@ -1,10 +1,9 @@
 <script setup>
+  import PageHeader from "./components/PageHeader.vue";
+  import MainPage from "./views/MainPage.vue";
 </script>
 
 <template>
- <h1>Minty Host</h1>
-
- <h2 class="text-3xl font-bold underline">
-  Test
- </h2>
+  <PageHeader />
+  <MainPage />
 </template>
