@@ -1,11 +1,14 @@
 <script>
+import ApartmentCard from './ApartmentCard.vue';
 import useSearchHook from '../hooks/searchHook';
 
 export default {
-  setup() {
-    const { apartments, onMounted } = useSearchHook();
+  components: {
+    ApartmentCard,
+  },
 
-    onMounted();
+  setup() {
+    const { apartments } = useSearchHook();
 
     return {
       apartments,
@@ -16,13 +19,12 @@ export default {
 
 <template>
   <div class="container mx-auto mt-8">
-    <div class="pb-8">
-      <h1 class="text-2xl font-bold mb-4 text-center">Apartment List</h1>
-    </div>
+    <h1 class="text-2xl font-bold mb-4 text-center">VIVIENDAS</h1>
+    <h2 class="text-2xl font-bold mb-4 text-center">Descubre nuestros apartamentos</h2>
 
-    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
-      <li v-for="apartment in apartments" :key="apartment.id" class="bg-white p-4 shadow-md rounded-md">
-        <h2 class="text-lg font-semibold mb-2">{{ apartment.address }}</h2>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-12 gap-8 text-center">
+      <li v-for="apartment in apartments" :key="apartment.id">
+        <ApartmentCard :apartment="apartment" />
       </li>
     </ul>
   </div>

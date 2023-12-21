@@ -9,6 +9,7 @@ export default {
       colors: {
         custom: {
           500: '#009483',
+          grey300: '#B5B1B0',
         }
       }
     },
