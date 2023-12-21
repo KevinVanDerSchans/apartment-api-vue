@@ -4,6 +4,6 @@
 
 <template>
   <main>
-    <span>Inicio</span>
+    <span>Contacto</span>
   </main>
 </template>

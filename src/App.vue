@@ -1,9 +1,8 @@
 <script setup>
-  import PageHeader from "./components/PageHeader.vue";
-  import MainPage from "./views/MainPage.vue";
+import PageNavbar from './components/PageNavbar.vue'
 </script>
 
 <template>
-  <PageHeader />
-  <MainPage />
+  <PageNavbar />
+  <router-view />
 </template>
