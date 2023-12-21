@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <footer class="bg-gray-800 text-white p-4 fixed bottom-0 w-full">
+  <footer class="bg-gray-800 text-white p-4 bottom-0 w-full">
     <div class="container mx-auto text-center">
       <div class="flex flex-col md:flex-row items-center justify-between">
         <div>
