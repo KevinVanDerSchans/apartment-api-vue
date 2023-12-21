@@ -1,9 +1,11 @@
 <script setup>
-
+import NavbarComponent from '../components/NavbarComponent.vue'
+import FooterComponent from '../components/FooterComponent.vue'
 </script>
 
 <template>
   <main>
-    <span>Inicio</span>
+    <NavbarComponent />
+    <FooterComponent />
   </main>
 </template>
