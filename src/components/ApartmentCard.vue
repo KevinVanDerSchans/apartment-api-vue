@@ -3,12 +3,47 @@ export default {
   props: {
     apartment: Object,
   },
+  data() {
+    return {
+      currentImageIndex: 0,
+    };
+  },
+  computed: {
+    currentImage() {
+      return this.apartment.pic[this.currentImageIndex];
+    }
+  },
+  methods: {
+    nextImage() {
+      this.currentImageIndex = (this.currentImageIndex + 1) % this.apartment.pic.length;
+    },
+    prevImage() {
+      this.currentImageIndex = (this.currentImageIndex - 1 + this.apartment.pic.length) % this.apartment.pic.length;
+    },
+  },
 };
 </script>
 
 <template>
   <div class="bg-white shadow-xl rounded-tl-2xl rounded-br-2xl overflow-hidden flex-col">
-    <img :src="apartment.pic[0]" class="w-full" alt="Apartment photo" />
+    <img :src="currentImage" class="w-full" alt="Apartment photo" />
+
+    <div class="carousel-controls flex justify-center mt-2 gap-10 p-2">
+      <button
+        @click="prevImage"
+        class="text-black font-extrabold text-2xl "
+      >
+      <img src="/icons/arrow-left.svg" alt="Previous photo" class="w-6"/>
+      </button>
+
+      <button
+        @click="nextImage"
+        class="text-black font-extrabold text-2xl"
+      >
+      <img src="/icons/arrow-right.svg" alt="Next photo" class="w-6" />
+      </button>
+
+    </div>
 
     <div class="flex-col">
       <div class="container">
