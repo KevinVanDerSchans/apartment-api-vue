@@ -2,15 +2,15 @@
 </script>
 
 <template>
-  <footer class="bg-gray-800 text-white p-4 bottom-0 w-full">
-    <div class="container mx-auto text-center">
+  <footer class="bg-gray-800 text-white bottom-0 w-full">
+    <div class="container mx-auto text-center ">
       <div class="flex flex-col md:flex-row items-center justify-between">
-        <div>
-          <h1 class="text-lg font-bold">Minty Host</h1>
-          <p class="text-sm">© 2023 Todos los derechos reservados.</p>
+        <div class="p-4">
+          <h1 class="text-sm font-bold">Minty Host</h1>
+          <p class="text-xs">© 2023 Todos los derechos reservados.</p>
         </div>
-        <div class="mt-4 md:mt-0">
-          <ul class="flex space-x-4 font-bold">
+        <div class="md:mt-0">
+          <ul class="flex space-x-4 px-4 font-bold text-sm">
             <li class="hover:text-custom-500">
               <router-link to="/viviendas">Viviendas</router-link>
             </li>
