@@ -54,17 +54,17 @@ export default {
             </div>
 
             <div class="location-container flex justify-center w-full gap-6 border-b-2 border-gray-200 pb-4">
-              <div class="flex p-2 bg-custom-500 rounded-lg gap-1.5">
+              <div class="flex p-2 bg-custom-green500 rounded-lg gap-1.5">
                 <img class="w-6" src="/icons/user.svg" alt="User Icon">
                 <span class="text-white font-bold">{{ apartment.accommodates_max }}</span>
               </div>
 
               <div class="house-container flex items-center gap-2">
                 <img class="w-6" src="/icons/house.svg" alt="House icon">
-                <span class="font-bold text-custom-500">{{ apartment.town }}</span>
+                <span class="font-bold text-custom-green500">{{ apartment.town }}</span>
               </div>
 
-              <button class="map-container flex pl-4 pr-4 rounded-lg items-center bg-custom-500 hover:bg-black">
+              <button class="map-container flex pl-4 pr-4 rounded-lg items-center bg-custom-green500 hover:bg-black">
                 <span><img class="w-6" src="/icons/map.svg" alt="Map icon" /></span>
               </button>
             </div>
@@ -90,7 +90,7 @@ export default {
                 </span>
                 <span v-else class="placeholder"></span>
 
-                <span class="text-custom-500 font-bold text-xl md:text-2xl ml-2">{{ apartment.square_meter }}m²</span>
+                <span class="text-custom-green700 font-bold text-xl md:text-2xl ml-2">{{ apartment.square_meter }}m²</span>
               </div>
 
               <div class="flex items-center p-1">
@@ -113,7 +113,7 @@ export default {
             </div>
 
             <div>
-              <button class="bg-custom-500 p-1.5 rounded hover:bg-black">
+              <button class="bg-custom-green700 p-1.5 rounded hover:bg-black">
                 <span class="font-bold text-sm text-white">Ver disponibilidad</span>
               </button>
             </div>

@@ -33,25 +33,25 @@ export default {
     <div class="hidden md:flex bg h-12">
       <router-link
         :to="{ name: 'housing' }"
-        class="flex items-center h-full px-5 text-white-500 font-bold hover:text-custom-500 uppercase"
+        class="flex items-center h-full px-5 text-white-500 font-bold hover:text-custom-green700 uppercase"
       >
         Viviendas
       </router-link>
       <router-link
         :to="{ name: 'questions' }"
-        class="flex items-center h-full px-5 text-white-500 font-bold hover:text-custom-500 uppercase"
+        class="flex items-center h-full px-5 text-white-500 font-bold hover:text-custom-green700 uppercase"
       >
         Preguntas
       </router-link>
       <router-link
         :to="{ name: 'contact' }"
-        class="flex items-center h-full px-5 text-white-500 font-bold hover:text-custom-500 uppercase"
+        class="flex items-center h-full px-5 text-white-500 font-bold hover:text-custom-green700 uppercase"
       >
         Contacto
       </router-link>
     </div>
 
-    <div v-if="showMenu" class="md:hidden flex flex-col bg fixed top-20 right-0 bg-custom-500 rounded">
+    <div v-if="showMenu" class="md:hidden flex flex-col bg fixed top-20 right-0 bg-custom-green700 rounded">
       <div class="justify-end items-end p-6">
         <router-link
           :to="{ name: 'housing' }"

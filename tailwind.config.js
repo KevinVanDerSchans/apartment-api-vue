@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         custom: {
-          500: '#009483',
+          green700: '#009483',
           grey300: '#B5B1B0',
           black500: '#252525',
         }
