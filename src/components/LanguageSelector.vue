@@ -25,7 +25,7 @@ export default {
       <button
         @click="toggleDropdown"
         :class="{ '': isDropdownOpen }"
-        class="bg-custom-500 text-white px-4 py-1 ml-8cursor-pointer focus:outline-none lg:fixed fixed top-7 right-16"
+        class="bg-custom-green700 text-white px-4 py-1 ml-8cursor-pointer focus:outline-none lg:fixed fixed top-7 right-16"
       >
       <div class="relative flex gap-2 items-center w-18">
         <span class="font-extrabold">{{ selectedLanguage.toUpperCase() }}</span>
@@ -37,14 +37,14 @@ export default {
         <div class="py-1">
           <button
             @click="setLanguage('es')"
-            :class="{ 'bg-custom-500 text-white font-bold': selectedLanguage === 'es' }"
+            :class="{ 'bg-custom-green700 text-white font-bold': selectedLanguage === 'es' }"
             class="w-full text-left px-4 py-2 text-sm">
             ES
           </button>
 
           <button
             @click="setLanguage('en')"
-            :class="{ 'bg-custom-500 text-white font-bold': selectedLanguage === 'en' }"
+            :class="{ 'bg-custom-green700 text-white font-bold': selectedLanguage === 'en' }"
             class="w-full text-left px-4 py-2 text-sm">
             EN
           </button>

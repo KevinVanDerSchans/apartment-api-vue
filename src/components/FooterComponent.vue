@@ -11,13 +11,13 @@
         </div>
         <div class="md:mt-0">
           <ul class="flex space-x-4 px-4 font-bold text-sm">
-            <li class="hover:text-custom-500">
+            <li class="hover:text-custom-green700">
               <router-link to="/viviendas">Viviendas</router-link>
             </li>
-            <li class="hover:text-custom-500">
+            <li class="hover:text-custom-green700">
               <router-link to="/preguntas">Preguntas</router-link>
             </li>
-            <li class="hover:text-custom-500">
+            <li class="hover:text-custom-green700">
               <router-link to="/contacto">Contacto</router-link>
             </li>
           </ul>
