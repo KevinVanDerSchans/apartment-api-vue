@@ -3,6 +3,7 @@ import MainPage from '../views/MainPage.vue'
 import HousingPage from '../views/HousingPage.vue'
 import QuestionsPage from '../views/QuestionsPage.vue'
 import ContactPage from '../views/ContactPage.vue'
+import ErrorPage from '../views/ErrorPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       name: 'contact',
       component: ContactPage
     },
+    {
+      path: '/:catchAll(.*)',
+      name: 'error',
+      component: ErrorPage
+    }
   ]
 })
 

@@ -6,6 +6,9 @@ import FooterComponent from '../components/FooterComponent.vue'
 <template>
   <main>
     <NavbarComponent />
-    <FooterComponent />
+
+    <div class="w-full fixed bottom-0">
+      <FooterComponent />
+    </div>
   </main>
 </template>
