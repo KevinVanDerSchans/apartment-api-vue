@@ -29,7 +29,7 @@ export default {
       >
       <div class="relative flex gap-2 items-center w-18">
         <span class="font-extrabold">{{ selectedLanguage.toUpperCase() }}</span>
-        <img src="/icons/arrow-down.svg" class="w-3"/>
+        <img src="/icons/arrow-down.svg" class="w-3" alt="Select other language" />
       </div>
       </button>
 
