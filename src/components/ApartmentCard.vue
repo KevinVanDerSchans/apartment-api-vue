@@ -1,4 +1,6 @@
 <script>
+import Swal from 'sweetalert2';
+
 export default {
   props: {
     apartment: Object,
@@ -19,6 +21,25 @@ export default {
     },
     prevImage() {
       this.currentImageIndex = (this.currentImageIndex - 1 + this.apartment.pic.length) % this.apartment.pic.length;
+    },
+    notAvailable() {
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        iconColor: 'black',
+        color: '#e3ebea',
+
+        title: "Actualmente, el apartamento no está disponible. Para obtener asistencia, contáctenos en info@mintystay.com",
+        showConfirmButton: false,
+        timer: 9000,
+        customClass: {
+          container: 'custom-swal-container',
+        },
+        didOpen: () => {
+          Swal.getPopup().style.background = 'linear-gradient(to bottom, #38b2a4, #036156)';
+          Swal.getTitle().style.fontSize = '1.4rem';
+        }
+      });
     },
   },
 };
@@ -113,8 +134,11 @@ export default {
             </div>
 
             <div>
-              <button class="bg-custom-green700 p-1.5 rounded hover:bg-black">
-                <span class="font-bold text-sm text-white">Ver disponibilidad</span>
+              <button @click="notAvailable" class="bg-custom-green700 p-1.5 rounded hover:bg-black"
+              >
+                <span class="font-bold text-sm text-white">
+                  Ver disponibilidad
+                </span>
               </button>
             </div>
           </div>
