@@ -1,24 +1,5 @@
-<script>
-import ApartmentCard from './ApartmentCard.vue';
-import useSearchHook from '../hooks/searchHook';
-
-export default {
-  components: {
-    ApartmentCard,
-  },
-
-  setup() {
-    const { apartments } = useSearchHook();
-
-    return {
-      apartments,
-    };
-  },
-};
-</script>
-
 <template>
-  <div class="container mx-auto mt-8 p-8">
+  <div class="container mx-auto mt-32 p-8">
     <h1 class="text-xl font-extrabold mb-4 text-center text-custom-green700">VIVIENDAS</h1>
     <h2 class="text-lg font-extrabold mb-4 text-center">Descubre nuestros apartamentos</h2>
 
@@ -29,3 +10,22 @@ export default {
     </ul>
   </div>
 </template>
+
+<script>
+import ApartmentCard from './ApartmentCard.vue';
+import useApartments from '../hooks/useApartments';
+
+export default {
+  components: {
+    ApartmentCard,
+  },
+
+  setup() {
+    const { apartments } = useApartments();
+
+    return {
+      apartments,
+    };
+  },
+};
+</script>

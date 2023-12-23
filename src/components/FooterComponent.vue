@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <template>
   <footer class="bg-gray-800 text-white bottom-0 w-full">
     <div class="container mx-auto text-center ">

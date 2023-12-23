@@ -12,18 +12,15 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.3",
-    "axios": "^0.21.1",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5",
     "framer-motion": "^2.9.5",
     "i18next": "^22.5.1",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-http-backend": "^2.1.1",
     "typewriter-effect": "^2.20.1",
     "sweetalert2": "^11.9.0",
-    "animate.css": "^4.1.1",
-    "vue": "^3.3.11",
-    "vue-router": "^4.2.5"
+    "animate.css": "^4.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

@@ -1,8 +1,3 @@
-<script setup>
-import NavbarComponent from '../components/NavbarComponent.vue'
-import FooterComponent from '../components/FooterComponent.vue'
-</script>
-
 <template>
   <main>
     <NavbarComponent />
@@ -12,3 +7,15 @@ import FooterComponent from '../components/FooterComponent.vue'
     </div>
   </main>
 </template>
+
+<script>
+import NavbarComponent from '../components/NavbarComponent.vue'
+import FooterComponent from '../components/FooterComponent.vue'
+
+export default {
+  components: {
+    NavbarComponent,
+    FooterComponent,
+  }
+};
+</script>

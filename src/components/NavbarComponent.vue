@@ -1,27 +1,5 @@
-<script>
-import LanguageSelector from './LanguageSelector.vue'
-
-export default {
-
-  components: {
-    LanguageSelector
-  },
-
-  data() {
-    return {
-      showMenu: false
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.showMenu = !this.showMenu;
-    },
-  },
-};
-</script>
-
 <template>
-  <header class="flex fixed w-full top-0 justify-between items-center bg-custom-navbar text-custom-navbarLinks md:justify-center p-2">
+  <header class="flex fixed w-full top-0 justify-between items-center bg-custom-navbar text-custom-navbarLinks md:justify-center p-2 z-10">
     <router-link to="/">
       <img class="w-40 h-12 mr-8" src="/logo-minty-host.svg" alt="Minty Host Logo">
     </router-link>
@@ -77,3 +55,25 @@ export default {
     <LanguageSelector />
   </header>
 </template>
+
+<script>
+import LanguageSelector from './LanguageSelector.vue'
+
+export default {
+
+  components: {
+    LanguageSelector
+  },
+
+  data() {
+    return {
+      showMenu: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
+  },
+};
+</script>
