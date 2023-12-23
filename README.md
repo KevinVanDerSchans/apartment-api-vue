@@ -1,4 +1,4 @@
-# Minty Host - Technical Test
+# Minty Host - Technical Testt
 
 <br>
 
