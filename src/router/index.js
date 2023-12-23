@@ -34,6 +34,6 @@ const router = createRouter({
       component: ErrorPage
     }
   ]
-})
+});
 
 export default router;

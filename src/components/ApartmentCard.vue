@@ -1,53 +1,13 @@
-<script>
-import Swal from 'sweetalert2';
-
-export default {
-  props: {
-    apartment: Object,
-  },
-  data() {
-    return {
-      currentImageIndex: 0,
-    };
-  },
-  computed: {
-    currentImage() {
-      return this.apartment.pic[this.currentImageIndex];
-    }
-  },
-  methods: {
-    nextImage() {
-      this.currentImageIndex = (this.currentImageIndex + 1) % this.apartment.pic.length;
-    },
-    prevImage() {
-      this.currentImageIndex = (this.currentImageIndex - 1 + this.apartment.pic.length) % this.apartment.pic.length;
-    },
-    notAvailable() {
-      Swal.fire({
-        position: "center",
-        icon: "warning",
-        iconColor: 'black',
-        color: '#e3ebea',
-
-        title: "Actualmente, el apartamento no está disponible. Para obtener asistencia, contáctenos en info@mintystay.com",
-        showConfirmButton: false,
-        timer: 9000,
-        customClass: {
-          container: 'custom-swal-container',
-        },
-        didOpen: () => {
-          Swal.getPopup().style.background = 'linear-gradient(to bottom, #38b2a4, #036156)';
-          Swal.getTitle().style.fontSize = '1.4rem';
-        }
-      });
-    },
-  },
-};
-</script>
-
 <template>
   <div class="bg-white shadow-xl rounded-tl-2xl rounded-br-2xl overflow-hidden flex-col">
-    <img :src="currentImage" class="w-full" alt="Apartment photo" />
+    <transition name="slide" mode="out-in">
+      <img
+        :key="currentImage"
+        :src="currentImage"
+        class="w-full transition-transform transform-gpu hover:scale-125"
+        alt="Apartment photo"
+      />
+    </transition>
 
     <div class="carousel-controls flex justify-center mt-2 gap-10 p-2">
       <button
@@ -85,7 +45,7 @@ export default {
                 <span class="font-bold text-custom-green500">{{ apartment.town }}</span>
               </div>
 
-              <button class="map-container flex pl-4 pr-4 rounded-lg items-center bg-custom-green500 hover:bg-black">
+              <button class="map-container flex pl-4 pr-4 rounded-lg items-center bg-custom-green700 hover:bg-black">
                 <span><img class="w-6" src="/icons/map.svg" alt="Map icon" /></span>
               </button>
             </div>
@@ -147,3 +107,50 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+import Swal from 'sweetalert2';
+
+export default {
+  props: {
+    apartment: Object,
+  },
+  data() {
+    return {
+      currentImageIndex: 0,
+    };
+  },
+  computed: {
+    currentImage() {
+      return this.apartment.pic[this.currentImageIndex];
+    }
+  },
+  methods: {
+    nextImage() {
+      this.currentImageIndex = (this.currentImageIndex + 1) % this.apartment.pic.length;
+    },
+    prevImage() {
+      this.currentImageIndex = (this.currentImageIndex - 1 + this.apartment.pic.length) % this.apartment.pic.length;
+    },
+    notAvailable() {
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        iconColor: 'black',
+        color: '#e3ebea',
+
+        title: "Actualmente, el apartamento no está disponible. Para obtener asistencia, contáctenos en info@mintystay.com",
+        showConfirmButton: false,
+        timer: 4000,
+        customClass: {
+          container: 'custom-swal-container',
+        },
+        didOpen: () => {
+          Swal.getPopup().style.background = 'linear-gradient(to bottom, #38b2a4, #036156)';
+          Swal.getTitle().style.fontSize = '1.4rem';
+        }
+      });
+    },
+  },
+};
+</script>
