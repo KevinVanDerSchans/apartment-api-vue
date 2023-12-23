@@ -23,7 +23,6 @@
       >
       <img src="/icons/arrow-right.svg" alt="Next photo" class="w-6" />
       </button>
-
     </div>
 
     <div class="flex-col">
