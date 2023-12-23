@@ -34,14 +34,14 @@
             </div>
 
             <div class="location-container flex justify-center w-full gap-6 border-b-2 border-gray-200 pb-4">
-              <div class="flex p-2 bg-custom-green500 rounded-lg gap-1.5">
+              <div class="flex p-2 bg-custom-green700 rounded-lg gap-1.5">
                 <img class="w-6" src="/icons/user.svg" alt="User Icon">
                 <span class="text-white font-bold">{{ apartment.accommodates_max }}</span>
               </div>
 
               <div class="house-container flex items-center gap-2">
                 <img class="w-6" src="/icons/house.svg" alt="House icon">
-                <span class="font-bold text-custom-green500">{{ apartment.town }}</span>
+                <span class="font-bold text-custom-green700">{{ apartment.town }}</span>
               </div>
 
               <button class="map-container flex pl-4 pr-4 rounded-lg items-center bg-custom-green700 hover:bg-black">
