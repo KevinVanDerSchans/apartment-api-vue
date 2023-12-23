@@ -3,6 +3,10 @@
     <h1 class="text-xl font-extrabold mb-4 text-center text-custom-green700">VIVIENDAS</h1>
     <h2 class="text-lg font-extrabold mb-4 text-center">Descubre nuestros apartamentos</h2>
 
+    <FilterModal @apply-filters="applyFilters" />
+
+    <button @click="fetchApartments">Fetch Apartments</button>
+
     <div v-if="isLoading" class="flex flex-col w-full font-extrabold text-red-500 gap-8 text-2xl justify-center items-center text-center">
       <div class="spinner-border text-custom-green700"></div>
       <div class="mt-2">Cargando apartamentos...</div>
@@ -46,16 +50,40 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 import ApartmentCard from './ApartmentCard.vue';
 import useApartments from '../hooks/useApartments';
+import FilterModal from './FilterModal.vue';
 
 export default {
   components: {
     ApartmentCard,
+    FilterModal,
   },
-
   setup() {
-    const { apartments, error, isLoading, nextPage, prevPage, currentPage, itemsPerPage } = useApartments();
+    const {
+      apartments,
+      error,
+      isLoading,
+      nextPage,
+      prevPage,
+      currentPage,
+      itemsPerPage,
+      fetchApartments: fetchApartmentsHook, // Renamed to avoid conflict
+    } = useApartments();
+
+    const applyFiltersMainComponent = () => {
+      console.log('Applied Filters:', filters.value);
+      fetchApartmentsHook(filters.value);
+    };
+
+    // Ensure that filters are reactive
+    const filters = ref({
+      priceMin: null,
+      priceMax: null,
+      bedrooms: null,
+      maxGuests: null,
+    });
 
     return {
       apartments,
@@ -65,7 +93,10 @@ export default {
       prevPage,
       currentPage,
       itemsPerPage,
+      fetchApartments: fetchApartmentsHook,
+      applyFilters: applyFiltersMainComponent, // Use the renamed function
     };
   },
 };
 </script>
+
