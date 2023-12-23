@@ -14,7 +14,7 @@
 
 **DEPLOY**:
 <br>
-https://minty-host-technical-test.vercel.app/
+https://minty-host.vercel.app/
 
 <br>
 <br>

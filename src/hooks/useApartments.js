@@ -1,4 +1,5 @@
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from 'vue'
+import Swal from 'sweetalert2'
 
 const useApartments = () => {
   const apartments = ref([]);
@@ -27,16 +28,45 @@ const useApartments = () => {
       } else {
         console.log('Error en la llamada a la API', response.statusText);
         error.value = response.statusText;
+
+        Swal.fire({
+          position: "center",
+          icon: "warning",
+          iconColor: 'red',
+          color: 'red',
+
+          title: "Error al conectar con la API.",
+          showConfirmButton: false,
+          timer: 5000,
+          customClass: {
+            container: 'custom-swal-container',
+          },
+        });
       }
 
     } catch (error) {
-        console.error('Error en la llamada a la API', error);
-        error.value = error.message;
+      console.error('Error en la llamada a la API', error);
+      error.value = error.message;
+
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        iconColor: 'red',
+        color: 'red',
+
+        title: "Error al conectar con la API.",
+        showConfirmButton: false,
+        timer: 5000,
+        customClass: {
+          container: 'custom-swal-container',
+        },
+      });
 
     } finally {
       loading.value = false;
     }
   };
+
 
   onMounted(fetchApartments);
 
@@ -44,6 +74,7 @@ const useApartments = () => {
     apartments,
     error,
     loading,
+    isLoading: ref(false),
   };
 };
 
