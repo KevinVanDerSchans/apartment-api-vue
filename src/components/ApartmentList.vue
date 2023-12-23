@@ -3,11 +3,23 @@
     <h1 class="text-xl font-extrabold mb-4 text-center text-custom-green700">VIVIENDAS</h1>
     <h2 class="text-lg font-extrabold mb-4 text-center">Descubre nuestros apartamentos</h2>
 
-    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-12 gap-8 text-center">
-      <li v-for="apartment in apartments" :key="apartment.id">
-        <ApartmentCard :apartment="apartment" />
-      </li>
-    </ul>
+    <div v-if="isLoading" class="flex flex-col w-full font-extrabold text-red-500 gap-8 text-2xl justify-center items-center text-center">
+      <div class="spinner-border text-custom-green700"></div>
+      <div class="mt-2">Cargando apartamentos...</div>
+    </div>
+
+    <div v-else>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-12 gap-8 text-center">
+        <li v-for="apartment in apartments" :key="apartment.id">
+          <ApartmentCard :apartment="apartment" />
+        </li>
+      </ul>
+    </div>
+
+    <div v-if="error" class="flex flex-col gap-8 text-2xl justify-center items-center w-full font-extrabold text-red-500">
+      <img class="w-52" src="/icons/error.svg" alt="Error loading API">
+      {{ error }}
+    </div>
   </div>
 </template>
 
@@ -21,10 +33,12 @@ export default {
   },
 
   setup() {
-    const { apartments } = useApartments();
+    const { apartments, error, isLoading } = useApartments();
 
     return {
       apartments,
+      error,
+      isLoading
     };
   },
 };
