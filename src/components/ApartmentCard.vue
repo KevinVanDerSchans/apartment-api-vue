@@ -91,7 +91,7 @@
               <span class="text-custom-grey300 text-sm">/mes</span>
             </div>
 
-            <div>
+            <div class="pb-4">
               <button @click="notAvailable" class="check-availability-button-transition p-2">
                 <span class="font-bold text-sm text-white">
                   Ver disponibilidad
