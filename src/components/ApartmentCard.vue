@@ -12,14 +12,14 @@
     <div class="carousel-controls flex relative justify-center mt-2 gap-10 p-2">
       <button
         @click="prevImage"
-        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
+        class="arrow rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
       >
         <img src="/icons/arrow-left.svg" alt="Foto anterior" class="w-4"/>
       </button>
 
       <button
         @click="nextImage"
-        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
+        class="arrow rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
       >
         <img src="/icons/arrow-right.svg" alt="Siguiente foto" class="w-4"/>
       </button>
@@ -33,7 +33,7 @@
               <p class="font-extrabold p-4 text-sm">{{ apartment.apartment_title }}</p>
             </div>
 
-            <div class="location-container flex justify-center w-full gap-6 border-b-2 border-gray-200 pb-4">
+            <div class="location-container flex justify-center w-full gap-3 sm:gap-4 border-b-2 border-gray-200 pb-4">
               <div class="flex p-2 bg-custom-green700 rounded-full gap-1.5">
                 <img class="w-6" src="/icons/user.svg" alt="Icono de usuario para indicar número máximo de huéspedes">
                 <span class="text-white font-bold">{{ apartment.accommodates_max }}</span>
@@ -51,7 +51,7 @@
           </div>
         </div>
 
-        <div class="bottom flex flex-col md:flex-row justify-center gap-6 p-2">
+        <div class="bottom flex flex-col md:flex-row justify-center sm:gap-0 p-2">
           <div class="left-container">
             <div class="left">
               <div class="flex w-full justify-center gap-1 p-1 items-center">
@@ -72,12 +72,12 @@
                 <span class="text-custom-green700 font-bold text-xl md:text-lg ml-2">{{ apartment.square_meter }}m²</span>
               </div>
 
-              <div class="flex items-center p-1">
+              <div class="flex items-center p-1 sm:flex sm:w-full justify-center sm:text-center">
                 <img src="/icons/bedroom.svg" class="w-6 mr-1" alt="Icono de una cama para indicar el máximo de dormitorios"/>
                 <span class="font-bold text-sm">{{ apartment.bedrooms }} Dorm.</span>
               </div>
 
-              <div class="flex items-center p-1">
+              <div class="flex items-center p-1 sm:flex sm:w-full justify-center sm:text-center">
                 <img src="/icons/bathroom.svg" class="w-6 mr-1" alt="Icono de una bañera para indicar el máximo de baños"/>
                 <span class="font-bold text-sm">{{ apartment.bathrooms }} Baño</span>
               </div>
@@ -92,8 +92,7 @@
             </div>
 
             <div>
-              <button @click="notAvailable" class="bg-custom-green700 p-1.5 rounded hover:bg-black"
-              >
+              <button @click="notAvailable" class="check-availability-button-transition p-2">
                 <span class="font-bold text-sm text-white">
                   Ver disponibilidad
                 </span>
@@ -152,3 +151,31 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.check-availability-button-transition {
+  animation: availabilityButton 2.2s infinite alternate;
+}
+
+.arrow {
+  animation: arrowColorChange 4.4s infinite alternate;
+}
+
+@keyframes availabilityButton {
+  from {
+    background-color: #38b2a4;
+  }
+  to {
+    background-color: #1F2937;
+  }
+}
+
+@keyframes arrowColorChange {
+  from {
+    background-color: #f3f4f6;
+  }
+  to {
+    background-color: #57baafc0;
+  }
+}
+</style>

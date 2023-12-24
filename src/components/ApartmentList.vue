@@ -9,7 +9,7 @@
     </div>
 
     <div v-else>
-      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-12 gap-8 text-center">
+      <ul class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-12 gap-8 text-center">
         <li v-for="apartment in apartments" :key="apartment.id">
           <ApartmentCard :apartment="apartment" />
         </li>
@@ -26,7 +26,7 @@
         @click="prevPage"
         :disabled="currentPage === 1"
         v-if="currentPage > 1"
-        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
+        class="arrow rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
       >
         <img src="/icons/arrow-left.svg" alt="Página anterior" class="w-4"/>
       </button>
@@ -39,7 +39,7 @@
         @click="nextPage"
         :disabled="apartments.length < itemsPerPage"
         v-if="apartments.length >= itemsPerPage"
-        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
+        class="arrow rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
       >
         <img src="/icons/arrow-right.svg" alt="Siguiente página" class="w-4"/>
       </button>
@@ -71,3 +71,18 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.check-availability-button-transition {
+  animation: colorChange 2.2s infinite alternate;
+}
+
+@keyframes arrowColorChange {
+  from {
+    background-color: #f3f4f6;
+  }
+  to {
+    background-color: #80bbb4;
+  }
+}
+</style>
