@@ -17,7 +17,7 @@
     </div>
 
     <div v-if="error" class="flex flex-col gap-8 text-2xl justify-center items-center w-full font-extrabold text-red-500">
-      <img class="w-52" src="/icons/error.svg" alt="Error loading API">
+      <img class="w-52" src="/icons/error.svg" alt="Señal que indica que no se ha podido conectar con la API externa">
       {{ error }}
     </div>
 
@@ -26,20 +26,22 @@
         @click="prevPage"
         :disabled="currentPage === 1"
         v-if="currentPage > 1"
-        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 focus:outline-none focus:ring focus:border-custom-green700 transition-all duration-300 ease-in-out"
+        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
       >
-        <img src="/icons/arrow-left.svg" alt="Previous page" class="w-4"/>
+        <img src="/icons/arrow-left.svg" alt="Página anterior" class="w-4"/>
       </button>
 
-      <span class="text-xl font-bold text-gray-800">Pág. {{ currentPage }}</span>
+      <span class="bg-custom-green700 text-white rounded-full w-20 p-2 text-lg font-bold text-center">
+        Pág. {{ currentPage }}
+      </span>
 
       <button
         @click="nextPage"
         :disabled="apartments.length < itemsPerPage"
         v-if="apartments.length >= itemsPerPage"
-        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 focus:outline-none focus:ring focus:border-custom-green700 transition-all duration-300 ease-in-out"
+        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
       >
-        <img src="/icons/arrow-right.svg" alt="Next page" class="w-4"/>
+        <img src="/icons/arrow-right.svg" alt="Siguiente página" class="w-4"/>
       </button>
     </div>
   </div>
