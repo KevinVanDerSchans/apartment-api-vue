@@ -1,7 +1,6 @@
 <template>
   <main>
     <NavbarComponent />
-
     <UnderConstruction />
 
     <div class="w-full fixed bottom-0">
@@ -11,9 +10,9 @@
 </template>
 
 <script>
-import NavbarComponent from '../components/NavbarComponent.vue'
-import UnderConstruction from '../components/UnderConstruction.vue'
-import FooterComponent from '../components/FooterComponent.vue'
+import NavbarComponent from '@/components/NavbarComponent.vue'
+import UnderConstruction from '@/components/UnderConstruction.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   components: {

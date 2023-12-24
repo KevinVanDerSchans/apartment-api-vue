@@ -6,13 +6,13 @@
       class="hover:bg-custom-green700 focus:bg-custom-green700 text-white px-4 py-2 ml-8 cursor-pointer focus:outline-none lg:fixed fixed top-3 right-20 lg:top-3 lg:right-16 transition-all duration-300 ease-in-out"
     >
       <div class="relative flex items-center">
-        <img src="/icons/flag-es.svg" class="w-4 h-6 mr-2" alt="Idioma ES" />
-        <span class="font-extrabold">{{ selectedLanguage.toUpperCase() }}</span>
+        <img src="/icons/flag-es.svg" class="w-4 h-6 mr-2" alt="Español" />
+        <span class="font-extrabold uppercase">{{ selectedLanguage }}</span>
         <img src="/icons/arrow-down.svg" class="w-3 ml-2" alt="Selector para desplegar opciones para cambiar el idioma" />
       </div>
     </button>
 
-    <div v-if="isDropdownOpen" class="mt-2 w-24 bg-custom-grey300 ring-1 ring-black ring-opacity-5 lg:fixed fixed top-11 right-16 shadow-md">
+    <div v-if="isDropdownOpen" class="mt-2 w-24 bg-custom-grey300 ring-1 ring-black ring-opacity-5 lg:fixed fixed top-11 lg:right-16 right-20 shadow-md">
       <div class="divide-y divide-gray-400">
         <button
           @click="setLanguage('es')"
@@ -20,7 +20,7 @@
           class="w-full text-left px-4 py-2 text-sm transition-all duration-300 ease-in-out"
         >
           <img src="/icons/flag-es.svg" class="w-4 h-6 mr-2" alt="Español" />
-          <span class="text-lg">ES</span>
+          <span class="text-lg uppercase">es</span>
         </button>
 
         <button
@@ -29,7 +29,7 @@
           class="w-full text-left px-4 py-2 text-sm transition-all duration-300 ease-in-out"
         >
           <img src="/icons/flag-en.svg" class="w-4 h-6 mr-2" alt="Inglés" />
-          <span class="text-lg">EN</span>
+          <span class="text-lg uppercase">en</span>
         </button>
       </div>
     </div>
@@ -37,13 +37,11 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-
 export default {
   data() {
     return {
-      selectedLanguage: ref('es'),
-      isDropdownOpen: ref(false),
+      selectedLanguage: 'es',
+      isDropdownOpen: false,
     };
   },
   methods: {
