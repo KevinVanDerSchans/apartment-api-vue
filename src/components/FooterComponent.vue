@@ -16,7 +16,7 @@
           </ul>
         </div>
         <div class="md:order-1 p-2 md:ml-8 md:p-2">
-          <h1 class="text-lg font-bold">Minty Host</h1>
+          <p class="text-lg font-bold">Minty Host</p>
           <p class="text-xs">© 2023 Todos los derechos reservados.</p>
         </div>
       </div>

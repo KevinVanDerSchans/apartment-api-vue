@@ -12,11 +12,11 @@ export default {
         custom: {
           navbar: '#296960',
           languageSelector: '#4bbdb0',
-          green700: '#009483',
+          pagination: '#212121',
           navbarLinks: '#edf2f2',
+          green700: '#009483',
           grey300: '#B5B1B0',
           black500: '#252525',
-          pagination: '#212121',
         }
       }
     },

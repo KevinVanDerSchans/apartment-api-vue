@@ -1,10 +1,14 @@
 <template>
   <div class="bg-white shadow-xl rounded-tl-2xl rounded-br-2xl overflow-hidden flex-col">
-    <transition name="slide" mode="out-in">
+    <transition
+      mode="out-in"
+      enter-active-class="transition-transform ease-in-out duration-500 transform"
+      leave-active-class="transition-transform ease-in-out duration-500 transform"
+    >
       <img
         :key="currentImage"
         :src="currentImage"
-        class="w-full object-cover transition-transform transform-gpu hover:scale-150"
+        class="w-full h-64 object-cover transform-gpu hover:scale-150"
         alt="Foto actual del apartamento"
       />
     </transition>

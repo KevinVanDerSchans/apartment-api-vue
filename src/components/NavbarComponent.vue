@@ -29,7 +29,7 @@
       </router-link>
     </div>
 
-    <div v-if="showMenu" class="md:hidden flex flex-col bg fixed top-16 right-0 bg-custom-green700 transition-all duration-300 ease-in-out">
+    <div v-show="showMenu" class="md:hidden flex flex-col bg fixed top-16 right-0 bg-custom-green700 transition-all duration-300 ease-in-out">
       <div class="justify-end items-end p-6">
         <router-link
           :to="{ name: 'housing' }"

@@ -1,10 +1,10 @@
-# Minty Host - Technical Testt
+# Minty Host - Technical Test
 
 <br>
 
 <p align="center">
   <img
-    src="minty-host-readme.png"
+    src="public/readme/minty-host-readme.png"
     alt="Prueba técnica para Minty Host"
     width="850"
   >
@@ -44,9 +44,9 @@ https://minty-host.vercel.app/
 
 <div>
 
-    ✔️ Responsive Navbar. In reduced size, the component's functionality changes to display a "hamburger" menu, revealing the same options.
+    ✔️ Responsive navbar with a toggle for a "hamburger" menu in mobile sizes.
 
-    ✔️ Language Selector (ES / EN).
+    ✔️ Language Selector visual component (ES / EN).
 
     ✔️ Dynamically obtained "List" of apartments from the provided API.
 
