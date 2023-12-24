@@ -10,11 +10,13 @@ export default {
     extend: {
       colors: {
         custom: {
-          navbar: '#38b2a4',
-          navbarLinks: '#e3ebea',
+          navbar: '#296960',
+          languageSelector: '#4bbdb0',
           green700: '#009483',
+          navbarLinks: '#edf2f2',
           grey300: '#B5B1B0',
           black500: '#252525',
+          pagination: '#212121',
         }
       }
     },

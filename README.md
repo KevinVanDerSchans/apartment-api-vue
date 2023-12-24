@@ -5,7 +5,7 @@
 <p align="center">
   <img
     src="minty-host-readme.png"
-    alt="Minty Host Technical Test"
+    alt="Prueba técnica para Minty Host"
     width="850"
   >
 </p>
@@ -133,7 +133,7 @@ npm run lint
 <p align="center">
   <img
     src="public/readme/lighthouse-results.png"
-    alt="Lighthouse results"
+    alt="Resultados de Lighthouse"
     width="850"
   >
 </p>

@@ -4,24 +4,24 @@
       <img
         :key="currentImage"
         :src="currentImage"
-        class="w-full transition-transform transform-gpu hover:scale-125"
-        alt="Apartment photo"
+        class="w-full object-cover transition-transform transform-gpu hover:scale-150"
+        alt="Foto actual del apartamento"
       />
     </transition>
 
-    <div class="carousel-controls flex justify-center mt-2 gap-10 p-2">
+    <div class="carousel-controls flex relative justify-center mt-2 gap-10 p-2">
       <button
         @click="prevImage"
-        class="text-black font-extrabold text-2xl "
+        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
       >
-      <img src="/icons/arrow-left.svg" alt="Previous photo" class="w-6"/>
+        <img src="/icons/arrow-left.svg" alt="Foto anterior" class="w-4"/>
       </button>
 
       <button
         @click="nextImage"
-        class="text-black font-extrabold text-2xl"
+        class="rounded-full bg-gray-200 hover:bg-custom-green700 w-10 h-10 flex items-center justify-center text-gray-600 transition-all duration-300 ease-in-out"
       >
-      <img src="/icons/arrow-right.svg" alt="Next photo" class="w-6" />
+        <img src="/icons/arrow-right.svg" alt="Siguiente foto" class="w-4"/>
       </button>
     </div>
 
@@ -34,18 +34,18 @@
             </div>
 
             <div class="location-container flex justify-center w-full gap-6 border-b-2 border-gray-200 pb-4">
-              <div class="flex p-2 bg-custom-green700 rounded-lg gap-1.5">
-                <img class="w-6" src="/icons/user.svg" alt="User Icon">
+              <div class="flex p-2 bg-custom-green700 rounded-full gap-1.5">
+                <img class="w-6" src="/icons/user.svg" alt="Icono de usuario para indicar número máximo de huéspedes">
                 <span class="text-white font-bold">{{ apartment.accommodates_max }}</span>
               </div>
 
               <div class="house-container flex items-center gap-2">
-                <img class="w-6" src="/icons/house.svg" alt="House icon">
+                <img class="w-6" src="/icons/house.svg" alt="Icono de una casa para indicar la provincia del apartamento">
                 <span class="font-bold text-custom-green700">{{ apartment.town }}</span>
               </div>
 
-              <button class="map-container flex pl-4 pr-4 rounded-lg items-center bg-custom-green700 hover:bg-black">
-                <span><img class="w-6" src="/icons/map.svg" alt="Map icon" /></span>
+              <button @click="notAvailable" class="map-container flex pl-4 pr-4 rounded-full items-center bg-custom-green700 hover:bg-black">
+                <span><img class="w-6" src="/icons/map.svg" alt="Icono de un mapa para indicar la ubicación del apartamento" /></span>
               </button>
             </div>
           </div>
@@ -54,41 +54,40 @@
         <div class="bottom flex flex-col md:flex-row justify-center gap-6 p-2">
           <div class="left-container">
             <div class="left">
-              <div class="flex gap-1 p-1 items-center">
+              <div class="flex w-full justify-center gap-1 p-1 items-center">
                 <span v-if="apartment.amenities.wifi">
-                  <img class="w-6" src="/icons/wifi.svg" alt="Wifi icon"/>
+                  <img class="w-6" src="/icons/wifi.svg" alt="Icono de wi-fi que indica si el apartamento dispone de ello"/>
                 </span>
                 <span v-else class="placeholder"> </span>
 
                 <span v-if="apartment.amenities['A/C']">
-                  <img class="w-6" src="/icons/air.svg" alt="Air icon"/>
+                  <img class="w-6" src="/icons/air.svg" alt="Icono de A/C que indica si el apartamento dispone de ello"/>
                 </span>
                 <span v-else class="placeholder"> </span>
 
                 <span v-if="apartment.amenities.heating">
-                  <img class="w-6" src="/icons/heating.svg" alt="Heating icon"/>
+                  <img class="w-6" src="/icons/heating.svg" alt="Icono de calefacción que indica si el apartamento dispone de ello"/>
                 </span>
                 <span v-else class="placeholder"></span>
-
-                <span class="text-custom-green700 font-bold text-xl md:text-2xl ml-2">{{ apartment.square_meter }}m²</span>
+                <span class="text-custom-green700 font-bold text-xl md:text-lg ml-2">{{ apartment.square_meter }}m²</span>
               </div>
 
               <div class="flex items-center p-1">
-                <img src="/icons/bedroom.svg" class="w-6 mr-1" alt="Bedroom icon"/>
+                <img src="/icons/bedroom.svg" class="w-6 mr-1" alt="Icono de una cama para indicar el máximo de dormitorios"/>
                 <span class="font-bold text-sm">{{ apartment.bedrooms }} Dorm.</span>
               </div>
 
               <div class="flex items-center p-1">
-                <img src="/icons/bathroom.svg" class="w-6 mr-1" alt="Bathroom icon"/>
+                <img src="/icons/bathroom.svg" class="w-6 mr-1" alt="Icono de una bañera para indicar el máximo de baños"/>
                 <span class="font-bold text-sm">{{ apartment.bathrooms }} Baño</span>
               </div>
             </div>
           </div>
 
           <div class="right items-center justify-center flex flex-col">
-            <div class="p-1">
+            <div class="p-2">
               <span class="text-custom-grey300 text-sm">desde </span>
-              <span class="font-extrabold text-xl md:text-2xl">{{ apartment.monthly_price }}</span><span class="font-extrabold text-xl">€</span>
+              <span class="font-bold text-xl md:text-3xl">{{ apartment.monthly_price }}</span><span class="font-extrabold text-xl">€</span>
               <span class="text-custom-grey300 text-sm">/mes</span>
             </div>
 
