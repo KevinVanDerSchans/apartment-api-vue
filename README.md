@@ -14,7 +14,7 @@
 
 **DEPLOY**:
 <br>
-
+https://vue3-tailwind-apartment-api.vercel.app
 
 <br>
 <br>
