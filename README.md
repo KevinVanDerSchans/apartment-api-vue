@@ -1,11 +1,11 @@
-# Minty Host - Technical Test
+# Apartment API with Vue 3 (Option API) and Tailwind CSS
 
 <br>
 
 <p align="center">
   <img
-    src="public/readme/minty-host-readme.png"
-    alt="Prueba técnica para Minty Host"
+    src="public/readme/project-overview.png"
+    alt="Vista general del proyecto"
     width="850"
   >
 </p>
@@ -14,14 +14,14 @@
 
 **DEPLOY**:
 <br>
-https://minty-host.vercel.app/
+
 
 <br>
 <br>
 
 # Index
 
-1. [Project Title and Deployment link](#minty-host---technical-test)
+1. [Project Title and Deployment link](#apartment-api-with-vue-3-option-api-and-tailwind-css)
 
 2. [Features](#features)
 
@@ -60,6 +60,8 @@ https://minty-host.vercel.app/
       - Square meters.
       - Monthly price.
       - Button to check availability.
+
+    ✔️ Pagination structured in 3 items.
 
     ✔️ Responsive design.
 

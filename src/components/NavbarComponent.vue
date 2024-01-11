@@ -1,7 +1,7 @@
 <template>
   <header class="flex fixed w-full top-0 justify-between items-center bg-custom-green700 text-custom-navbarLinks md:justify-center p-2 z-10">
     <router-link to="/" class="flex-shrink-0">
-      <img class="w-40 h-12 mr-8 ml-4" src="/logo-minty-host.svg" alt="Logo oficial de Minty Host">
+      <img class="w-56 h-12 mr-8 rounded-lg" src="/logo.png" alt="Apartment API logo">
     </router-link>
 
     <button @click="toggleMenu" class="text-white cursor-pointer fixed top-2 right-3 md:hidden p-2">

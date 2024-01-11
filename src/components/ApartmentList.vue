@@ -52,7 +52,6 @@
 
 <script>
 import ApartmentCard from './ApartmentCard.vue';
-import { ref } from 'vue';
 
 export default {
   components: {
@@ -60,18 +59,12 @@ export default {
   },
 
   data() {
-    const apartments = ref([]);
-    const error = ref(null);
-    const loading = ref(false);
-    const currentPage = ref(1);
-    const itemsPerPage = 3;
-
     return {
-      apartments,
-      error,
-      loading,
-      currentPage,
-      itemsPerPage,
+      apartments: [],
+      error: null,
+      loading: false,
+      currentPage: 1,
+      itemsPerPage: 3,
     };
   },
 
