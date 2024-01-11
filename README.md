@@ -1,4 +1,4 @@
-# Apartment API with Vue 3 (Option API) and Tailwind CSS
+# Frontend with Vue 3 (Option API) and Tailwind CSS
 
 <br>
 
@@ -14,7 +14,7 @@
 
 **DEPLOY**:
 <br>
-
+https://vue3-tailwind-apartment-api.vercel.app
 
 <br>
 <br>
