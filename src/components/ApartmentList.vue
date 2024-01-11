@@ -12,7 +12,7 @@
     </div>
 
     <div v-else>
-      <ul class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-12 gap-8 text-center">
+      <ul class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 p-2 sm:p-8 pt-8 gap-8 text-center">
         <li v-for="apartment in apartments" :key="apartment.id">
           <ApartmentCard :apartment="apartment" />
         </li>
@@ -52,7 +52,6 @@
 
 <script>
 import ApartmentCard from './ApartmentCard.vue';
-import { ref } from 'vue';
 
 export default {
   components: {
@@ -60,18 +59,12 @@ export default {
   },
 
   data() {
-    const apartments = ref([]);
-    const error = ref(null);
-    const loading = ref(false);
-    const currentPage = ref(1);
-    const itemsPerPage = 3;
-
     return {
-      apartments,
-      error,
-      loading,
-      currentPage,
-      itemsPerPage,
+      apartments: [],
+      error: null,
+      loading: false,
+      currentPage: 1,
+      itemsPerPage: 3,
     };
   },
 

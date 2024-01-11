@@ -3,7 +3,7 @@
     <button
       @click="toggleDropdown"
       :class="{ 'bg-custom-languageSelector-active': isDropdownOpen, 'bg-custom-languageSelector': !isDropdownOpen }"
-      class="hover:bg-custom-green700 focus:bg-custom-green700 text-white px-4 py-2 ml-8 cursor-pointer focus:outline-none lg:fixed fixed top-3 right-20 lg:top-3 lg:right-16 transition-all duration-300 ease-in-out"
+      class="hover:bg-custom-green700 focus:bg-custom-green700 text-white px-4 py-2 ml-8 cursor-pointer focus:outline-none lg:fixed fixed top-3 right-[68px] lg:top-3 lg:right-16 transition-all duration-300 ease-in-out"
     >
       <div class="relative flex items-center">
         <img src="/icons/flag-es.svg" class="w-4 h-6 mr-2" alt="Español" />
@@ -12,7 +12,7 @@
       </div>
     </button>
 
-    <div v-if="isDropdownOpen" class="mt-2 w-24 bg-custom-grey300 ring-1 ring-black ring-opacity-5 lg:fixed fixed top-11 lg:right-16 right-20 shadow-md">
+    <div v-if="isDropdownOpen" class="mt-2 w-24 bg-custom-grey300 ring-1 ring-black ring-opacity-5 lg:fixed fixed top-11 lg:right-16 right-16 shadow-md">
       <div class="divide-y divide-gray-400">
         <button
           @click="setLanguage('es')"
