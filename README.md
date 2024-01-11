@@ -1,4 +1,4 @@
-# Apartment API with Vue 3 (Option API) and Tailwind CSS
+# Frontend with Vue 3 (Option API) and Tailwind CSS
 
 <br>
 
