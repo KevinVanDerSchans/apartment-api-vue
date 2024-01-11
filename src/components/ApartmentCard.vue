@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow-xl rounded-tl-2xl rounded-br-2xl overflow-hidden flex-col">
+  <div class="bg-white shadow-xl rounded-tl-2xl rounded-br-2xl overflow-hidden flex-col pb-3">
     <transition
       mode="out-in"
       enter-active-class="transition-transform ease-in-out duration-500 transform"
