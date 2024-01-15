@@ -1,5 +1,6 @@
 {
-  "name": "apartment-api-with-vue3",
+  "name": "apartment-api-vue",
+  "description": "Frontend for an Apartment API built with Vue 3 (Option API) and Tailwind CSS.",
   "version": "0.1.0",
   "private": true,
   "type": "module",
