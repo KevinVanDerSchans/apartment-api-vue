@@ -1,28 +1,23 @@
-import i18n from 'i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import { createI18n } from 'vue-i18n'
 
-const resources = {
-  es: {
-    translation: {
-    }
-  },
-
+const messages = {
   en: {
     translation: {
+      discover: 'Discover our apartments',
     }
   },
+  es: {
+    translation: {
+      discover: 'Descubre nuestros apartamentos',
+    }
+  }
 }
 
-i18n
-  .use(LanguageDetector)
+const i18n = createI18n({
 
-  .init({
-    debug: false,
-    fallbackLng: 'en',
-    interpolation: {
-      escapeValue: false,
-    },
-    resources,
-  });
+  locale: 'es',
+  fallbackLocale: 'es',
+  messages,
+});
 
 export default i18n;

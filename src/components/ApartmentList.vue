@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto mt-32 p-8">
     <h1 class="text-xl font-extrabold mb-4 text-center text-custom-green700">VIVIENDAS</h1>
-    <h2 class="text-lg font-extrabold mb-4 text-center">Descubre nuestros apartamentos</h2>
+    <h2 class="text-lg font-extrabold mb-4 text-center">{{ $t('translation.discover')}}</h2>
 
     <div v-if="loading" class="flex flex-col w-full font-extrabold text-red-500 gap-8 text-2xl py-20 justify-center items-center text-center">
       <div class="spinner-border text-custom-green700"></div>

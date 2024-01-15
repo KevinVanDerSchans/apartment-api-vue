@@ -37,21 +37,30 @@
 </template>
 
 <script>
+import i18n from '../i18n';
+
 export default {
   data() {
     return {
-      selectedLanguage: 'es',
+      selectedLanguage: i18n.locale,
       isDropdownOpen: false,
     };
   },
   methods: {
     setLanguage(lang) {
-      this.selectedLanguage = lang;
+      this.selectedLanguage = lang; // Establece el nuevo idioma
+      i18n.locale = lang; // Cambia el idioma en i18n
+
       this.toggleDropdown();
     },
     toggleDropdown() {
       this.isDropdownOpen = !this.isDropdownOpen;
     },
   },
-};
+  watch: {
+    selectedLanguage(newLang) {
+      i18n.locale = newLang; // Asegúrate de que el cambio de idioma se refleje en i18n
+    }
+  }
+}
 </script>
